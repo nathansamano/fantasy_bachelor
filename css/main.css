@@ -1,0 +1,85 @@
+body {
+    background:  #92dce0 !important;
+}
+
+#topNav {
+  background-color: #92dce0;
+  border-color:  #92dce0 !important;
+}
+
+.navbar-right {
+  margin-right: 0px !important;
+}
+
+.navbar-brand {
+  font-size: 30px !important;
+}
+
+header {
+  height: 10%;
+  background-color: #3ec303;
+}
+
+#side {
+  background-color: #b5b5b5;
+  float: left;
+  width: 100%;
+  height: 100%;
+  margin: .5%;
+  border-color: #92dce0;
+}
+
+.nav-sidebar {
+  font-family: virtue;
+  font-size: 20px;
+  box-shadow:         0px 11px 25px rgba(50, 50, 50, 0.75);
+}
+
+#content-main, #content-dashboard, #content-register, #content-weekly-results {
+  margin: .5%;
+  padding: .5%;
+  height: 100%;
+  overflow-y: auto;
+  text-align: top;
+  background-color:  #7f909a;
+  border-radius: 10px;
+}
+
+#dashboard {
+  background: linear-gradient(to right, red, white, blue);
+  font-size: 200%;
+}
+
+#weekly-results-heading {
+  font-size: 200%;
+}
+
+@media screen and (min-width: 768px) {
+  #side {
+    position: absolute;
+    left: -1000px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+  #sendBtn {
+    width: 20%;
+    display: inline;
+  }
+  #m {
+    width: 80%;
+    display: inline;
+  }
+
+  #logs {
+    position: absolute;
+    left: -1000px;
+  }
+}
+
+#submitPicksBtn {
+  position: absolute;
+  right: 20px;
+}
+

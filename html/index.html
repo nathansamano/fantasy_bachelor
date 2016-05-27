@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+ <!-- head content must come *after* these tags -->
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <!--meta name="google-site-verification" content="bSX2l42ztWqeT7G7Pg-0ChidTrFwtASqMVZX7Z2Npao" /-->
+ <meta name="fragment" content="!">
+ <meta name="description" content="Fantasy Bachelor">
+
+ <title>Our First SPA</title>
+
+ <!-- Our "good enough for now" stylesheet -->
+ <link rel="stylesheet" href="../css/main.css" type="text/css" />
+
+ <!-- Third-party libraries -->
+ <script src="/lib/jquery-1.11.3.min.js"></script>
+ <link rel="stylesheet" href="/lib/bootstrap-3.3.5/dist/css/bootstrap.min.css">
+ <script src="/lib/bootstrap-3.3.5/dist/js/bootstrap.min.js"></script>
+
+ <script src="../lib/page.js"></script>
+ <script src="../lib/moment.js"></script>
+ <script src="../lib/moment-duration-format.js"></script>
+
+ <!-- Our Javascript -->
+ <script src='../js/results.js'></script>
+ <script src='../js/spa.js'></script>
+ <script src='../js/spa.shell.js'></script>
+
+ <!-- Feature modules -->
+ <script src='../js/spa.dashboard.js'></script>
+ <script src='../js/spa.register.js'></script>
+ <script src='../js/spa.weekly_results.js'></script>
+
+ <!-- Let's get started -->
+ <script>
+  $(function() {
+   spa.initModule($('#spa'));
+  });
+ </script>
+
+</head>
+
+<body>
+ <main id="spa"></main>
+</body>
+
+</html>
