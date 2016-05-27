@@ -10,13 +10,26 @@ var
   setWatch,
   http           = require('http'),
   express        = require('express'),
+  path           = require('path'),
+  favicon        = require('static-favicon'),
+  cookieParser   = require('cookie-parser'),
   socketIo       = require('socket.io'),
   bodyParser     = require('body-parser'),
   methodOverride = require('method-override'),
   morgan         = require('morgan'),
   fsHandle       = require('fs'),
 
+  dbConfig = require('./db'),
+  mongoose = require('mongoose'),
+
+  passport       = require('passport'),
+  expressSession = require('express-session'),
+  flash          = require('connect-flash'),
+  initPassport   = require('./passport/init'),
+  passportRoutes = require('./routes/index')(passport),
+
   app      = express(),
+
   router   = express.Router(),
   routes   = require('./js/routes.js'),
   server   = http.createServer( app ),
@@ -64,16 +77,60 @@ var
  
   });
 
+  // view engine setup
+  app.set('views', path.join(__dirname, 'views'));
+  app.set('view engine', 'jade');
+
+  app.use(favicon());
+  app.use(morgan('dev'));
+
   app.use( bodyParser.urlencoded({ extended: false }));
   app.use(bodyParser.json());
   app.use(methodOverride());
   // Turn on verbose logging when needed by uncommenting line below
   // app.use(morgan('combined'));
+  app.use(cookieParser());
+  app.use(express.static(path.join(__dirname, 'public')));
+
+  // Configuring Passport
+  app.use(expressSession({secret: 'mySecretKey'}));
+  app.use(passport.initialize());
+  app.use(passport.session());
+
+  // Using the flash middleware provided by connect-flash to store messages in session
+  // and displaying in templates
+  app.use(flash());
+
+  // Initialize Passport
+  initPassport(passport);
+  app.use('/', passportRoutes); // might confict
+
   routes.configRoutes( router, server );
-  app.use('/', router);
+  app.use('/', router); // with this
   //app.use(require('prerender-node').set('prerenderToken', 'KpWv54ERZuWdTbB3DO5e'));
 
+  // catch 404 and forward to error handler
+  app.use(function(req, res, next) {
+    var err = new Error('Not Found');
+    err.status = 404;
+    next(err);
+  });
+
+  // development error handler
+  // will print stacktrace
+  if (app.get('env') === 'development') {
+    app.use(function(err, req, res, next) {
+      res.status(err.status || 500);
+      res.render('error', {
+        message: err.message,
+        error: err
+      });
+    });
+  }
+
   // --- End server configuration 
+
+  module.exports = app;
 
   // --- Start service
   server.listen(8000);
