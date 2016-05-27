@@ -13,6 +13,11 @@ var isAuthenticated = function (req, res, next) {
 
 module.exports = function(passport){
 
+	// Serve files from html sibling directory
+  	var options = {
+    	root: __dirname + '/../html/'
+  	};
+
 	/* GET login page. */
 	router.get('/', function(req, res) {
     	// Display the Login page with any flash message, if any
@@ -40,7 +45,8 @@ module.exports = function(passport){
 
 	/* GET Home Page */
 	router.get('/home', isAuthenticated, function(req, res){
-		res.render('home', { user: req.user });
+		//res.render('home', { user: req.user });
+		res.sendFile('index.html', options);
 	});
 
 	/* Handle Logout */
