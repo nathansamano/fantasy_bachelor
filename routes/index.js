@@ -45,8 +45,8 @@ module.exports = function(passport){
 
 	/* GET Home Page */
 	router.get('/home', isAuthenticated, function(req, res){
-		//res.render('home', { user: req.user });
-		res.sendFile('index.html', options);
+		res.render(__dirname + '/../html/index.html', { user: req.user });
+		//res.sendFile('index.html', options);
 	});
 
 	/* Handle Logout */
