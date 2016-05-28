@@ -14,7 +14,23 @@ html
     link(rel='stylesheet', href='/css/main.css', type='text/css')
 
     // Third-party libraries
+    script(src='/lib/jquery-1.11.3.min.js')
     link(rel='stylesheet', href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css')
+    script(src='/lib/bootstrap-3.3.5/dist/js/bootstrap.min.js')
+
+    script(src="../lib/page.js")
+ 	script(src="../lib/moment.js")
+ 	script(src="../lib/moment-duration-format.js")
+
+ 	// My Javascript
+ 	script(src='../js/results.js')
+ 	script(src='../js/spa.js')
+ 	script(src='../js/spa.shell.js')
+
+ 	// Feature modules
+ 	script(src='../js/spa.dashboard.js')
+ 	script(src='../js/spa.register.js')
+ 	script(src='../js/spa.weekly_results.js')
 
   body
     block content
