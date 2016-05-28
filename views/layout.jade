@@ -2,7 +2,19 @@ doctype html
 html
   head
     title= title
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='fragment', content='!')
+    meta(name='description', content='Fantasy Bachelor')
+
+    title Fantasy Bachelor
+
+    // stylesheets
     link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/css/main.css', type='text/css')
+
+    // Third-party libraries
     link(rel='stylesheet', href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css')
+
   body
     block content
