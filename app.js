@@ -4,7 +4,6 @@ var favicon = require('static-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var http = require('http');
 
 var dbConfig = require('./db');
 var mongoose = require('mongoose');
@@ -12,9 +11,6 @@ var mongoose = require('mongoose');
 mongoose.connect(dbConfig.url);
 
 var app = express();
-var router = express.Router();
-var myroutes = require('./js/routes.js');
-var server = http.createServer( app );
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -46,9 +42,6 @@ initPassport(passport);
 
 var routes = require('./routes/index')(passport);
 app.use('/', routes);
-
-myroutes.configRoutes( router, server );
-app.use('/', router);
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {
