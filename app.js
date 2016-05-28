@@ -11,6 +11,7 @@ var mongoose = require('mongoose');
 mongoose.connect(dbConfig.url);
 
 var app = express();
+var router = express.Router();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -42,6 +43,9 @@ initPassport(passport);
 
 var routes = require('./routes/index')(passport);
 app.use('/', routes);
+
+var myroutes = require('./js/routes.js')(passport);
+app.use('/', router);
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {
