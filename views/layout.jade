@@ -32,5 +32,11 @@ html
     script(src='../js/spa.register.js')
     script(src='../js/spa.weekly_results.js')
 
+    // Start app
+    script(type='text/javascript').
+      $(function() {
+        spa.initModule($('#spa'));
+      });
+
   body
     block content
