@@ -161,7 +161,7 @@ spa.shell = (function () {
     currentMod = jqueryMap.$dashboard;
 
     // Set up routes
-    page('/', index);
+    page('/', dashboard);
     page('/dashboard', dashboard);
     page('/dashboard', signIn);
     page('/weekly-results', weekly_results);
