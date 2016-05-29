@@ -36,7 +36,7 @@ spa.shell = (function () {
       + '</nav>'
       
       // main sign-in form & body
-      + '<section><div id="content-main">'
+      /*+ '<section><div id="content-main">'
         + '<form role="form">'
           + '<div class="form-group">'
             + 'Username<input class="form-control" id="inputdefault" type="text">'
@@ -46,7 +46,7 @@ spa.shell = (function () {
         + '<button type="button" class="btn btn-primary" id="registerBtn">Register</button>'
         + '<a href="/dashboard"><button type="button" class="btn btn-primary" id="signInBtn">Sign In</button></a>'
       + '</div>'
-      + '</section>'
+      + '</section>'*/
       + '<section><div id="content-dashboard"></div></section>'
       + '<section><div id="content-register"></div></section>'
       + '<section><div id="content-weekly-results"></div></section>'
@@ -151,7 +151,7 @@ spa.shell = (function () {
 
     // Initialize each feature module
     //spa.dates.initModule(jqueryMap.$dates);
-    jqueryMap.$dashboard.hide();
+    //jqueryMap.$dashboard.hide();
     jqueryMap.$register.hide();
     spa.dashboard.initModule(jqueryMap.$dashboard);
     spa.register.initModule(jqueryMap.$register);
