@@ -57,7 +57,7 @@ spa.dashboard = (function () {
           + '</div>'
 
           + '<div>Rankings'
-            + '<button type="button" class="btn btn-primary col-xs-2" id="submitPicksBtn">Submit</button>'
+            + '<button type="button" class="btn btn-primary" id="submitPicksBtn">Submit</button>'
           + '</div>'
 
           + '<div>player: score</div>'
