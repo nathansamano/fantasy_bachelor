@@ -107,7 +107,7 @@ spa.shell = (function () {
     $('#logs').empty();
     $('#logs').append('<li class="top-nav"><a href="/dashboard">My Dashboard</a></li>'
           + '<li class="top-nav"><a href="/weekly-results">Weekly Results</a></li>'
-          + '<li class="top-nav"><a id="logOut" href="/"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>'
+          + '<li class="top-nav"><a id="logOut" href="/signout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>'
         );
   }
 
