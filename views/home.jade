@@ -1,9 +1,11 @@
 extends layout
+  head
 
     // Start app
     script(type='text/javascript').
       $(function() {
         spa.initModule($('#spa'));
       });
-
-main(id='spa')
+      
+  body
+    main(id='spa')
