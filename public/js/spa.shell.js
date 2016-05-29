@@ -151,7 +151,7 @@ spa.shell = (function () {
 
     // Initialize each feature module
     //spa.dates.initModule(jqueryMap.$dates);
-    jqueryMap.$dashboard.hide();
+    jqueryMap.$content.hide();
     jqueryMap.$register.hide();
     spa.dashboard.initModule(jqueryMap.$dashboard);
     spa.register.initModule(jqueryMap.$register);
