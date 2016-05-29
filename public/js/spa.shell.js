@@ -151,14 +151,14 @@ spa.shell = (function () {
 
     // Initialize each feature module
     //spa.dates.initModule(jqueryMap.$dates);
-    //jqueryMap.$dashboard.hide();
+    jqueryMap.$dashboard.hide();
     jqueryMap.$register.hide();
     spa.dashboard.initModule(jqueryMap.$dashboard);
     spa.register.initModule(jqueryMap.$register);
     spa.weekly_results.initModule(jqueryMap.$weekly_results);
 
     // Default content is "home" screen
-    currentMod = jqueryMap.$content;
+    currentMod = jqueryMap.$dashboard;
 
     // Set up routes
     page('/', index);
