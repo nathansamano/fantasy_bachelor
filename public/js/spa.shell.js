@@ -161,7 +161,7 @@ spa.shell = (function () {
     currentMod = jqueryMap.$dashboard;
 
     // Set up routes
-    page('/', dashboard);
+    page('/', index);
     page('/dashboard', dashboard);
     page('/dashboard', signIn);
     page('/weekly-results', weekly_results);
@@ -178,6 +178,8 @@ spa.shell = (function () {
     $("#logOut").on("click", function() {
       console.log("clicked logout");
     });
+
+    signIn();
 
   }; // End public method initModule
 
