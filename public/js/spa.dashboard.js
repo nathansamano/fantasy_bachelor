@@ -17,7 +17,7 @@ spa.dashboard = (function () {
         + '<section id="dashboard">'
           //+ '<div id="current_picks">'
             //+ '<script id="sock_js" src="/js/data.js"></script>'
-            + '<div>Welcome ' #{user.username} '</div>'
+            + '<div>Welcome ' + #{user.username} + '</div>'
             + '<div id="current_picks">Current Picks: </div>'
 
             + '<div class="col-xs-3">Pick 1</div>'
