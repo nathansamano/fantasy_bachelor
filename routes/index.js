@@ -26,16 +26,10 @@ module.exports = function(passport){
 
 	/* Handle Login POST */
 	router.post('/login', passport.authenticate('login', {
-		successRedirect: '/home',
+		successRedirect: '/dashboard', //'/home',
 		failureRedirect: '/',
 		failureFlash : true  
 	}));
-
-	/* Handle Weekly Results POST */
-	router.post('/weekly-results', isAuthenticated, function(req, res) {
-		console.log("POST weekly-results");
-		res.render('weekly_results', { user: req.user });
-	});
 
 	/* GET Registration Page */
 	router.get('/signup', function(req, res){
