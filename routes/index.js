@@ -59,6 +59,7 @@ module.exports = function(passport){
 
 	/* GET Dashboard Page */
 	router.get('/dashboard', isAuthenticated, function(req, res) {
+		console.log("got dashboard");
 		res.render('dashboard', { user: req.user });
 	});
 
