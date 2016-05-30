@@ -26,7 +26,7 @@ module.exports = function(passport){
 
 	/* Handle Login POST */
 	router.post('/login', passport.authenticate('login', {
-		successRedirect: '/home',
+		successRedirect: '/dashboard', //'/home',
 		failureRedirect: '/',
 		failureFlash : true  
 	}));
@@ -48,6 +48,11 @@ module.exports = function(passport){
 		res.render('home', { user: req.user });
 		//res.sendFile('index.html', options);
 		//res.render('index.html', { user: req.user }, options);
+	});
+
+	/* GET Dashboard Page */
+	router.get('/dashboard', isAuthenticated, function(req, res) {
+		res.render('dashboard', { user: req.user });
 	});
 
 	/* Handle Logout */
