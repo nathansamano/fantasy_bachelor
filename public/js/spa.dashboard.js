@@ -103,7 +103,7 @@ spa.dashboard = (function () {
     setJqueryMap();
 
     // populate select lists
-    /*for (var i = 0; i < contestants.length; i++) {
+    for (var i = 0; i < contestants.length; i++) {
       $('#sel1').append('<option>' + contestants[i] + '</option>');
     }
 
@@ -117,7 +117,7 @@ spa.dashboard = (function () {
 
     for (var i = 0; i < contestants.length; i++) {
       $('#sel4').append('<option>' + contestants[i] + '</option>');
-    }*/
+    }
 
     // update current_picks
     $("#submitPicksBtn").on("click", function() {
