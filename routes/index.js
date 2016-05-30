@@ -31,6 +31,11 @@ module.exports = function(passport){
 		failureFlash : true  
 	}));
 
+	/* Handle Weekly Results POST */
+	router.post('/weekly-results', function(req, res) {
+		res.render('weekly_results', { user: req.user });
+	});
+
 	/* GET Registration Page */
 	router.get('/signup', function(req, res){
 		res.render('register',{message: req.flash('message')});
