@@ -14,7 +14,7 @@ spa.dashboard = (function () {
     current_picks = [],
     configMap = {
       main_html : String()
-        + '<section id="dashboard">'
+        /*+ '<section id="dashboard">'
           //+ '<div id="current_picks">'
             //+ '<script id="sock_js" src="/js/data.js"></script>'
             + '<div>Welcome</div>'
@@ -61,7 +61,7 @@ spa.dashboard = (function () {
           + '</div>'
 
           + '<div>player: score</div>'
-        + '</section>'
+        + '</section>'*/
     },
 
     stateMap = {
