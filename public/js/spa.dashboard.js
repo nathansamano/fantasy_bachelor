@@ -14,7 +14,6 @@ spa.dashboard = (function () {
     current_picks = [],
     configMap = {
       main_html : String()
-      #user
         + '<section id="dashboard">'
           //+ '<div id="current_picks">'
             //+ '<script id="sock_js" src="/js/data.js"></script>'
