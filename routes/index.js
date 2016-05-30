@@ -55,6 +55,11 @@ module.exports = function(passport){
 		res.render('dashboard', { user: req.user });
 	});
 
+	/* GET Weekly Results Page */
+	router.get('/weekly-results', isAuthenticated, function(req, res) {
+		res.render('weekly_results', { user: req.user });
+	});
+
 	/* Handle Logout */
 	router.get('/signout', function(req, res) {
 		console.log( "The user ", { user: req.user }, "is logging out");
