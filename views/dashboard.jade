@@ -1,18 +1,19 @@
 extends home
 
-// top navbar
-nav
-	div.navbar.navbar-default(roll="navigation")
-		div.navbar-header
-			button(type="button", class="navbar-toggle", data-toggle="collapse", data-target=".navbar-ex1-collapse")
-				span.sr-only Toggle navigation
-				span.icon-bar
-				span.icon-bar
-				span.icon-bar
-			a.navbar-brand(href="/") Fantasy Bachelor
-		ul.nav.navbar-nav.navbar-right#logs
+body
+	// top navbar
+	nav
+		div.navbar.navbar-default(roll="navigation")
+			div.navbar-header
+				button(type="button", class="navbar-toggle", data-toggle="collapse", data-target=".navbar-ex1-collapse")
+					span.sr-only Toggle navigation
+					span.icon-bar
+					span.icon-bar
+					span.icon-bar
+				a.navbar-brand(href="/") Fantasy Bachelor
+			ul.nav.navbar-nav.navbar-right#logs
 
-// small nav dropdown
+	// small nav dropdown
 
 block content
 	section#content-main
