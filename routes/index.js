@@ -26,7 +26,7 @@ module.exports = function(passport){
 
 	/* Handle Login POST */
 	router.post('/login', passport.authenticate('login', {
-		successRedirect: '/weekly-results', //'/home',
+		successRedirect: '/dashboard', //'/home',
 		failureRedirect: '/',
 		failureFlash : true  
 	}));
@@ -38,7 +38,7 @@ module.exports = function(passport){
 
 	/* Handle Registration POST */
 	router.post('/signup', passport.authenticate('signup', {
-		successRedirect: '/home',
+		successRedirect: '/dashboard', //'/home',
 		failureRedirect: '/signup',
 		failureFlash : true  
 	}));
@@ -56,7 +56,7 @@ module.exports = function(passport){
 	});
 
 	/* GET Weekly Results Page */
-	router.get('/weekly-results', isAuthenticated, function(req, res) {
+	router.get('/weekly-results', function(req, res) {
 		res.render('weekly_results', { user: req.user });
 	});
 
