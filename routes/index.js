@@ -31,6 +31,9 @@ module.exports = function(passport){
 		failureFlash : true  
 	}));
 
+	/* Handle Weekly Results POST */
+	router.post('/weekly-results', )
+
 	/* GET Registration Page */
 	router.get('/signup', function(req, res){
 		res.render('register',{message: req.flash('message')});

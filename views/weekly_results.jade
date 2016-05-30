@@ -1,0 +1,26 @@
+extends home
+
+block content
+
+	// top navbar
+	nav
+		div.navbar.navbar-default(roll="navigation")
+			div.navbar-header
+				button(type="button", class="navbar-toggle", data-toggle="collapse", data-target=".navbar-ex1-collapse")
+					span.sr-only Toggle navigation
+					span.icon-bar
+					span.icon-bar
+					span.icon-bar
+				a.navbar-brand(href="/") Fantasy Bachelor
+			ul.nav.navbar-nav.navbar-right#logs
+
+	// small nav dropdown
+	nav.collapse.navbar-collapse.navbar-ex1-collapse.col-md-8.col-sm-7
+		ul.nav.nav-sidebar#side
+			li: a(href="/dashboard") My Dashboard
+			li: a(href="/weekly-results") Weekly Results
+			li#logOut: a(href="/signout"): span.glyphicon.glyphicon-log-out Logout
+
+	section#content-main
+		section#weekly-results
+			div#weekly-results-heading Weekly Results
