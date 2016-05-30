@@ -32,7 +32,7 @@ module.exports = function(passport){
 	}));
 
 	/* Handle Weekly Results POST */
-	router.post('/weekly-results', function(req, res) {
+	router.post('/weekly-results', isAuthenticated, function(req, res) {
 		console.log("POST weekly-results");
 		res.render('weekly_results', { user: req.user });
 	});
