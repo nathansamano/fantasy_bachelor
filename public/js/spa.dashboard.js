@@ -17,7 +17,7 @@ spa.dashboard = (function () {
         + '<section id="dashboard">'
           //+ '<div id="current_picks">'
             //+ '<script id="sock_js" src="/js/data.js"></script>'
-            + '<div>Welcome ' + #{user.username} + '</div>'
+            + '<div>Welcome</div>'
             + '<div id="current_picks">Current Picks: </div>'
 
             + '<div class="col-xs-3">Pick 1</div>'
@@ -129,6 +129,8 @@ spa.dashboard = (function () {
       $('#current_picks').append("Current Picks: " + current_picks.join(" "));
       console.log(current_picks);
     });
+
+    console.log(#{user.username});
 
   };
 
