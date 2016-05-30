@@ -1,26 +1,27 @@
 extends layout
 
 block content
-	section#dashboard
-		div Welcome #{user.username}
-		div#current_picks Current Picks: 
+	section#content-dashboard
+		section#dashboard
+			div Welcome #{user.username}
+			div#current_picks Current Picks: 
 
-		div.col-xs-3 Pick 1
-		div.col-xs-3 Pick 2
-		div.col-xs-3 Pick 3
-		div.col-xs-3 Goes Home
+			div.col-xs-3 Pick 1
+			div.col-xs-3 Pick 2
+			div.col-xs-3 Pick 3
+			div.col-xs-3 Goes Home
 
-		div.form-group.col-xs-3
-			select.form-control#sel1
+			div.form-group.col-xs-3
+				select.form-control#sel1
 
-		div.form-group.col-xs-3
-			select.form-control#sel2
+			div.form-group.col-xs-3
+				select.form-control#sel2
 
-		div.form-group.col-xs-3
-			select.form-control#sel3
+			div.form-group.col-xs-3
+				select.form-control#sel3
 
-		div.form-group.col-xs-3
-			select.form-control#sel4
+			div.form-group.col-xs-3
+				select.form-control#sel4
 
-		div Rankings
-			button(type="button", class="btn btn-primary", id="submitPicksBtn") Submit
+			div Rankings
+				button(type="button", class="btn btn-primary", id="submitPicksBtn") Submit
