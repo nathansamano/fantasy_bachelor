@@ -164,7 +164,7 @@ spa.shell = (function () {
     page('/', index);
     page('/dashboard', dashboard);
     page('/dashboard', signIn);
-    page('/weekly-results', weekly_results);
+    //page('/weekly-results', weekly_results);
     page();
 
     $("#signInBtn").on("click", function() {
