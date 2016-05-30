@@ -130,8 +130,6 @@ spa.dashboard = (function () {
       console.log(current_picks);
     });
 
-    console.log(#{user.username});
-
   };
 
   postSection = function() {
