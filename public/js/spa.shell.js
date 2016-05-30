@@ -29,8 +29,8 @@ spa.shell = (function () {
       // small nav dropdown
       + '<nav class="collapse navbar-collapse navbar-ex1-collapse col-md-8 col-sm-7">'
         + '<ul class="nav nav-sidebar" id="side">'
-          + '<li><a href="/dashboard">My Dashboard</a></li>'
-          + '<li><a href="/weekly-results">Weekly Results</a></li>'
+          + '<li><a href="">My Dashboard</a></li>'
+          + '<li><a href="">Weekly Results</a></li>'
           + '<li id="logOut"><a href=""><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>'
         + '</ul>'
       + '</nav>'
@@ -161,11 +161,11 @@ spa.shell = (function () {
     currentMod = jqueryMap.$dashboard;
 
     // Set up routes
-    //page('/', index);
-    //page('/dashboard', dashboard);
-    //page('/dashboard', signIn);
-    //page('/weekly-results', weekly_results);
-    //page();
+    page('/', index);
+    page('/dashboard', dashboard);
+    page('/dashboard', signIn);
+    page('/weekly-results', weekly_results);
+    page();
 
     $("#signInBtn").on("click", function() {
       signIn();
