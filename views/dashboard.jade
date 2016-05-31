@@ -46,7 +46,8 @@ block content
 				select.form-control#sel4
 
 			div Rankings
-				button(type="button", class="btn btn-primary", id="submitPicksBtn") Submit
+				form(class='form-submit-picks', action='/submitPicks', method='PUT')
+					button(type="submit", class="btn btn-primary", id="submitPicksBtn") Submit
 
 			#message
 				if message
