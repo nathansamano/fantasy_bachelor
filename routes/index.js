@@ -64,7 +64,7 @@ module.exports = function(passport){
 	});
 
 	/* Submit Picks PUT */
-	router.put('/submitPicks', isAuthenticated, function(req, res) {
+	router.put('/dashboard', isAuthenticated, function(req, res) {
 		User.findOne({ 'username' :  { user: req.user } }), function(err, user) {
 			if (err)
 				res.send(err);
