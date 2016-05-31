@@ -65,7 +65,7 @@ module.exports = function(passport){
 
 	/* Submit Picks PUT */
 	router.put('/submitPicks', isAuthenticated, function(req, res) {
-		User.findOne({ 'username' :  { user: req.user } }, function(err, user) {
+		User.findOne({ 'username' :  { user: req.user } }), function(err, user) {
 			if (err)
 				res.send(err);
 			user.currentPicks = req.body.currentPicks;
@@ -74,7 +74,7 @@ module.exports = function(passport){
 					res.send(err);
 				res.render('/dashboard', {message: req.flash('Current Picks set!')});
 			});
-	});
+	}});
 
 	/* Handle Logout */
 	router.get('/signout', function(req, res) {
