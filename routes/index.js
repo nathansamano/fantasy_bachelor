@@ -72,7 +72,7 @@ module.exports = function(passport){
 			user.save(function(err) {
 				if (err)
 					res.send(err);
-				res.render('/dashboard', {message: req.flash('Current Picks set!')});
+				res.json({message: req.flash('Current Picks set!')});
 			});
 	}});
 
