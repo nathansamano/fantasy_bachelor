@@ -58,7 +58,7 @@ module.exports = function(passport){
 	});
 
 	/* GET Weekly Results Page */
-	router.get('/weekly-results', function(req, res) {
+	router.get('/weekly-results', isAuthenticated, function(req, res) {
 		console.log("got weekly results...");
 		res.render('weekly_results', { user: req.user });
 	});
