@@ -47,3 +47,7 @@ block content
 
 			div Rankings
 				button(type="button", class="btn btn-primary", id="submitPicksBtn") Submit
+
+			#message
+				if message
+					h1.text-center.error-message #{message}

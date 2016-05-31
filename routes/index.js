@@ -63,6 +63,19 @@ module.exports = function(passport){
 		res.render('weekly_results', { user: req.user });
 	});
 
+	/* Submit Picks PUT */
+	router.put('/submitPicks', isAuthenticated, function(req, res) {
+		User.findOne({ 'username' :  { user: req.user } }, function(err, user) {
+			if (err)
+				res.send(err);
+			user.currentPicks = req.body.currentPicks;
+			user.save(function(err) {
+				if (err)
+					res.send(err);
+				res.render('/dashboard', {message: req.flash('Current Picks set!')});
+			});
+	});
+
 	/* Handle Logout */
 	router.get('/signout', function(req, res) {
 		console.log( "The user ", { user: req.user }, "is logging out");
