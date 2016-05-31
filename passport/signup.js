@@ -31,6 +31,17 @@ module.exports = function(passport){
                         newUser.password = createHash(password);
                         newUser.displayName = req.param('displayName');
                         newUser.score = null;
+                        newUser.currentPicks = null;
+                        newUser.week1Picks = null;
+                        newUser.week2Picks = null;
+                        newUser.week3Picks = null;
+                        newUser.week4Picks = null;
+                        newUser.week5Picks = null;
+                        newUser.week6Picks = null;
+                        newUser.week7Picks = null;
+                        newUser.week8Picks = null;
+                        newUser.week9Picks = null;
+                        newUser.week10Picks = null;
 
                         // save the user
                         newUser.save(function(err) {
