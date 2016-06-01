@@ -8,6 +8,6 @@ var spa = (function () {
     // Start the shell
     spa.shell.initModule( $container );
   };
-  var test = 'test';
+  var exports.test = 'test';
   return { initModule: initModule };
 }());
