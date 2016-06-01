@@ -78,7 +78,7 @@ module.exports = function(passport){
 				//res.json({message: req.flash('Current Picks set!')});
 				console.log("Current Picks set!?");
 			});*/
-	}});
+	});
 
 	/* Handle Logout */
 	router.get('/signout', function(req, res) {
