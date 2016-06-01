@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var dashboard = require('../public/js/spa.dashboard');
 
 var isAuthenticated = function (req, res, next) {
 	// if user is authenticated in the session, call the next() to call the next request handler 
@@ -54,6 +55,7 @@ module.exports = function(passport){
 	/* GET Dashboard Page */
 	router.get('/dashboard', isAuthenticated, function(req, res) {
 		console.log("got dashboard");
+		console.log(dashboard.contestants);
 		res.render('dashboard', { user: req.user });
 	});
 
@@ -65,7 +67,8 @@ module.exports = function(passport){
 
 	/* Submit Picks PUT */
 	router.put('/dashboard', isAuthenticated, function(req, res) {
-		User.findOne({ 'username' :  { user: req.user } }), function(err, user) {
+		console.log(dashboard.contestants);
+		/*User.findOne({ 'username' :  { user: req.user } }), function(err, user) {
 			if (err)
 				res.send(err);
 			user.currentPicks = req.body.currentPicks;
@@ -74,7 +77,7 @@ module.exports = function(passport){
 					res.send(err);
 				//res.json({message: req.flash('Current Picks set!')});
 				console.log("Current Picks set!?");
-			});
+			});*/
 	}});
 
 	/* Handle Logout */
