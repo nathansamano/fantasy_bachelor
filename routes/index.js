@@ -55,7 +55,7 @@ module.exports = function(passport){
 	/* GET Dashboard Page */
 	router.get('/dashboard', isAuthenticated, function(req, res) {
 		console.log("got dashboard");
-		console.log(dashboard.contestants);
+		//console.log(dashboard.contestants);
 		res.render('dashboard', { user: req.user });
 	});
 
@@ -66,7 +66,7 @@ module.exports = function(passport){
 	});
 
 	/* Submit Picks PUT */
-	router.put('/dashboard', isAuthenticated, function(req, res) {
+	/*router.put('/dashboard', isAuthenticated, function(req, res) {
 		console.log(dashboard.contestants);
 		/*User.findOne({ 'username' :  { user: req.user } }), function(err, user) {
 			if (err)
@@ -77,8 +77,8 @@ module.exports = function(passport){
 					res.send(err);
 				//res.json({message: req.flash('Current Picks set!')});
 				console.log("Current Picks set!?");
-			});*/
-	});
+			});
+	}});*/
 
 	/* Handle Logout */
 	router.get('/signout', function(req, res) {
