@@ -1,8 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var spa = require('../public/js/spa.js');
-var dashboard = require('../public/js/spa.dashboard.js');
-console.log(spa.test);
+//var spa = require('../public/js/spa.js');
 
 var isAuthenticated = function (req, res, next) {
 	// if user is authenticated in the session, call the next() to call the next request handler 
