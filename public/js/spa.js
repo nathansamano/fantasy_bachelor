@@ -8,6 +8,5 @@ var spa = (function () {
     // Start the shell
     spa.shell.initModule( $container );
   };
-  exports.test = spa.dashboard.contestants;
   return { initModule: initModule };
 }());
