@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var dashboard = require('../public/js/spa');
+var spa = require('../public/js/spa');
 
 var isAuthenticated = function (req, res, next) {
 	// if user is authenticated in the session, call the next() to call the next request handler 
@@ -55,7 +55,7 @@ module.exports = function(passport){
 	/* GET Dashboard Page */
 	router.get('/dashboard', isAuthenticated, function(req, res) {
 		console.log("got dashboard");
-		//console.log(dashboard.contestants);
+		console.log(spa.dashboard.contestants);
 		res.render('dashboard', { user: req.user });
 	});
 
