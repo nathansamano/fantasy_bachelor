@@ -55,7 +55,7 @@ module.exports = function(passport){
 	/* GET Dashboard Page */
 	router.get('/dashboard', isAuthenticated, function(req, res) {
 		console.log("got dashboard");
-		console.log(spa.dashboard.contestants);
+		console.log(spa.spa.dashboard.contestants);
 		res.render('dashboard', { user: req.user });
 	});
 
