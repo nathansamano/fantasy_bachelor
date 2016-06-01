@@ -2,7 +2,7 @@
  * spa.dashboard.js
  */
 exports.test2 = 'test2';
-spa.dashboard = (function () {
+exports.spa.dashboard = (function () {
   'use strict';
   //--- Begin local variables
   var
